@@ -55,7 +55,7 @@ CV.prototype.cvjson = function(csv, output, callback) {
         header = row;
         header.forEach(function(column, index) {
 	  var column = column.trim();
-	  header[index] = column.replace(/\.?([A-Z]+)/g, function (x,y){return "_" + y.toLowerCase()}).replace(/^_/, ""));
+	  header[index] = column.replace(/\.?([A-Z]+)/g, function (x,y){return "_" + y.toLowerCase()}).replace(/^_/, "");
 	});
       }else{
         var obj = {};
